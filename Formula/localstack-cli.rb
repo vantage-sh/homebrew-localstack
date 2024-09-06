@@ -39,6 +39,15 @@ class LocalstackCli < Formula
     bin.install_symlink libexec/"localstack"
   end
 
+  service do
+    run [opt_bin/"localstack", "start"]
+    keep_alive true
+    run_type :immediate
+    process_type :standard
+    log_path var/"log/localstack/stdout.log"
+    error_log_path var/"log/localstack/stderr.log"
+  end
+
   test do
     assert_match /LocalStack Command Line Interface/, shell_output("#{bin}/localstack --help", 0)
   end

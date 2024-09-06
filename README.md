@@ -8,7 +8,7 @@ This is a custom [Homebrew](https://brew.sh) tap for official LocalStack softwar
 You can add the custom tap in a MacOS or Linux terminal session using:
 
 ```bash
-brew tap localstack/tap
+brew tap vantage-sh/localstack
 ```
 
 ## Installing Formulae
